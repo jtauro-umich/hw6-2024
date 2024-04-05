@@ -107,7 +107,8 @@ function changeVolume() {
 	
 	if (video) {
 		video.volume = parseFloat(this.value) / 100;
-		document.getElementById("volume").textContent = this.value + "%";
+		var volumePercentage = Math.round(video.volume * 100);
+		document.getElementById("volume").textContent = volumePercentage + "%";
 	}
 }
 
