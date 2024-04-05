@@ -55,6 +55,9 @@ function playVid() {
 	console.log("Playing video");
 	if (video) {
 		video.play();
+
+		var volumePercentage = Math.round(video.volume * 100);
+		document.getElementById("volume").textContent = volumePercentage + "%";
 	}
 }
 
@@ -108,7 +111,7 @@ function changeVolume() {
 	if (video) {
 		video.volume = parseFloat(this.value) / 100;
 		var volumePercentage = Math.round(video.volume * 100);
-		document.getElementById("volume").textContent = "Volume is: " + volumePercentage + "%";
+		document.getElementById("volume").textContent = volumePercentage + "%";
 	}
 }
 
