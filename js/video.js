@@ -1,3 +1,4 @@
+// https://umich.instructure.com/courses/655651/assignments/2332993?module_item_id=3593128
 let video;
 let playButton;
 let pauseButton;
@@ -52,37 +53,37 @@ window.addEventListener("load", function() {
 
 function playVid() {
     console.log("Playing video");
-    if (video) {
+    // if (video) {
         video.play();
-    }
+    // }
 }
 
 function pauseVid() {
     console.log("Pausing video");
-    if (video) {
+    // if (video) {
         video.pause();
-    }
+    // }
 }
 
 function slowVid() {
 	console.log("Slowing video");
-	if (video) {
+	// if (video) {
 		video.playbackRate -= 0.10;
 		console.log("New speed:", video.playbackRate.toFixed(2));
-	}
+	// }
 }
 
 function fastVid() {
 	console.log("Speeding up video");
-	if (video) {
+	// if (video) {
 		video.playbackRate += 0.10;
 		console.log("New speed:", video.playbackRate.toFixed(2));
-	}
+	// }
 }
 
 function skipVid() {
 	console.log("Skipping ahead 10 seconds");
-	if (video) {
+	// if (video) {
 		if (video.currentTime + 10 >= video.duration) {
 			video.currentTime = 0;
 		} else {
@@ -90,28 +91,28 @@ function skipVid() {
 		}
 
 		console.log("Current location of the video:", video.currentTime.toFixed(2));
-	}
+	// }
 }
 
 function toggleMute() {
 	console.log("Toggling Mute");
-	if (video) {
+	// if (video) {
 			video.muted = !video.muted;
 			muteButton.textContent = video.muted ? "Unmute" : "Mute";
-	}
+	// }
 }
 
 function changeVolume() {
 	console.log("Changing Volume");
 	
-	if (video) {
+	// if (video) {
 		video.volume = parseFloat(this.value) / 100;
 		document.getElementById("volume").textContent = this.value + "%";
-	}
+	// }
 }
 
 function toggleStyle(style) {
-	if (video) {
+	// if (video) {
 		if (style === "oldSchool") {
 			console.log("Implementing vintage style");
 			video.classList.add("oldSchool");
@@ -119,5 +120,5 @@ function toggleStyle(style) {
 			console.log("Implementing original style");
 			video.classList.remove("oldSchool")
 		}
-	}
+	// }
 }
